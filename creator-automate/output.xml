@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211206 22:33:01.942" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="/Users/nadthapon/Documents/GitHub/Shoplive-automate/creator-automate/login.robot">
+<test id="s1-t1" name="Login facebook - success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211206 22:33:02.062" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211206 22:33:02.061" endtime="20211206 22:33:04.348"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_shoplive}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211206 22:33:04.349" level="INFO">Opening url 'https://creator-rc.shoplive.dev/'</msg>
+<status status="PASS" starttime="20211206 22:33:04.349" endtime="20211206 22:33:05.143"/>
+</kw>
+<kw name="Verify Shoplive page">
+<arg>${title_shoplive}</arg>
+<arg>${to_login_button}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211206 22:33:05.178" level="INFO">Page title is 'ShopLIVE Creator'.</msg>
+<status status="PASS" starttime="20211206 22:33:05.144" endtime="20211206 22:33:05.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211206 22:33:05.178" level="INFO">Clicking element '//*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211206 22:33:05.378" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211206 22:33:05.221" endtime="20211206 22:33:05.378"/>
+</kw>
+<msg timestamp="20211206 22:33:05.381" level="FAIL">Element with locator '//*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span' not found.</msg>
+<status status="FAIL" starttime="20211206 22:33:05.178" endtime="20211206 22:33:05.381"/>
+</kw>
+<status status="FAIL" starttime="20211206 22:33:05.143" endtime="20211206 22:33:05.382"/>
+</kw>
+<kw name="Input Username and Password">
+<arg>${input_user}</arg>
+<arg>${input_pass}</arg>
+<arg>${username_success}</arg>
+<arg>${password_success}</arg>
+<status status="NOT RUN" starttime="20211206 22:33:05.382" endtime="20211206 22:33:05.382"/>
+</kw>
+<kw name="Click Button Login">
+<arg>${btn_login}</arg>
+<status status="NOT RUN" starttime="20211206 22:33:05.382" endtime="20211206 22:33:05.382"/>
+</kw>
+<kw name="Verify Login Success">
+<arg>${txt_message}</arg>
+<status status="NOT RUN" starttime="20211206 22:33:05.383" endtime="20211206 22:33:05.383"/>
+</kw>
+<tag>success</tag>
+<status status="FAIL" starttime="20211206 22:33:02.061" endtime="20211206 22:33:05.383">Element with locator '//*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211206 22:33:05.384" endtime="20211206 22:33:05.446"/>
+</kw>
+<status status="FAIL" starttime="20211206 22:33:01.943" endtime="20211206 22:33:05.446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">success</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
