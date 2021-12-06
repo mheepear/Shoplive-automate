@@ -41,15 +41,15 @@ Verify Login Success
    Element Should Be Visible        ${xpath}
 
 *** Test Cases ***
-# Login facebook - Fail
-#     [tags]    fail
-#     Open Browser    about:blank    chrome
-#     Go To           ${url_shoplive}
-#     Verify Shoplive page        ${title_shoplive}       ${to_login_button}
-#     Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
-#     Click Button Login          ${btn_login}
-#     Verify Login Fail           ${txt_not_me}
-Login facebook - success
+Login shoplive - Fail
+    [tags]    fail
+    Open Browser    about:blank    chrome
+    Go To           ${url_shoplive}
+    Verify Shoplive page        ${title_shoplive}       ${to_login_button}
+    Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
+    Click Button Login          ${btn_login}
+    Verify Login Fail           ${txt_not_me}
+Login shoplive - success
     [tags]    success
     Open Browser    about:blank    chrome
     Go To           ${url_shoplive}
