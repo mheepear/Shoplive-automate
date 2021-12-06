@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    SeleniumLibrary      implicit_wait=2
 Library    BuiltIn
 Library    String
 Suite Teardown     Close Browser
@@ -7,9 +7,9 @@ Suite Teardown     Close Browser
 *** Variable ***
 ${url_shoplive}        https://creator-rc.shoplive.dev/
 ${title_shoplive}      ShopLIVE Creator
-${to_login_button}     //*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span
-${input_user}          //*[@id="app"]/span/div/div/div[1]/div/div/div[3]/div[1]/div/div[2]/input
-${input_pass}          //*[@id="app"]/span/div/div/div[1]/div/div/div[3]/div[2]/div/div[2]/input
+${to_login_button}     xpath=//*[@id="app"]/span/div/div/nav/div/div/div[1]
+${input_user}          name=email
+${input_pass}          name=password
 ${btn_login}           //*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button
 ${txt_not_me}          //*[@id="app"]/span/div/div/div[1]/div/div/p
 ${txt_message}         //*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span[1]
@@ -41,14 +41,14 @@ Verify Login Success
    Element Should Be Visible        ${xpath}
 
 *** Test Cases ***
-Login facebook - Fail
-    [tags]    fail
-    Open Browser    about:blank    chrome
-    Go To           ${url_shoplive}
-    Verify Shoplive page        ${title_shoplive}       ${to_login_button}
-    Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
-    Click Button Login          ${btn_login}
-    Verify Login Fail           ${txt_not_me}
+# Login facebook - Fail
+#     [tags]    fail
+#     Open Browser    about:blank    chrome
+#     Go To           ${url_shoplive}
+#     Verify Shoplive page        ${title_shoplive}       ${to_login_button}
+#     Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
+#     Click Button Login          ${btn_login}
+#     Verify Login Fail           ${txt_not_me}
 Login facebook - success
     [tags]    success
     Open Browser    about:blank    chrome
