@@ -1,8 +1,7 @@
 # Shoplive-automate
-
-# Install python!!!!
-# Important!!! install chromedriver
-# Install pip (https://bootstrap.pypa.io/get-pip.py)
+# Install python!!!! (search google)
+# Important!!! install chromedriver (search google)
+# Install pip => (https://bootstrap.pypa.io/get-pip.py)
 1. Download the get-pip.py file and store it in the same directory as python is installed.
 2. Change the current path of the directory in the command line to the path of the directory where the above file exists(python folder).
 3. [python get-pip.py] in command line
@@ -20,3 +19,5 @@
 # Run test file
 1. [robot <file name>] to run test
 
+# For more information about selenium lib for writing your own test
+https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
