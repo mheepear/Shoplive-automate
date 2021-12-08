@@ -17,7 +17,7 @@
 4. [deactivate] after using virtualenv
 
 # Run test file
-1. [robot <file name>] to run test
+1. [robot {file name}] to run test
 
 # For more information about selenium lib for writing your own test
 https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
