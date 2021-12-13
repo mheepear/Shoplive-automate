@@ -1,8 +1,12 @@
 *** Settings ***
-Library    SeleniumLibrary      implicit_wait=2
+Documentation     A resource file with reusable keywords and variables.
+...
+...               The system specific keywords created here form our own
+...               domain specific language. They utilize keywords provided
+...               by the imported SeleniumLibrary.
+Library           SeleniumLibrary       implicit_wait=2
 Library    BuiltIn
 Library    String
-Suite Teardown     Close Browser
 
 *** Variable ***
 ${url_shoplive}        https://creator-rc.shoplive.dev/
@@ -39,21 +43,3 @@ Verify Login Fail
 Verify Login Success
    [Arguments]        ${xpath}
    Element Should Be Visible        ${xpath}
-
-*** Test Cases ***
-Login shoplive - Fail
-    [tags]    fail
-    Open Browser    about:blank    chrome
-    Go To           ${url_shoplive}
-    Verify Shoplive page        ${title_shoplive}       ${to_login_button}
-    Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
-    Click Button Login          ${btn_login}
-    Verify Login Fail           ${txt_not_me}
-Login shoplive - success
-    [tags]    success
-    Open Browser    about:blank    chrome
-    Go To           ${url_shoplive}
-    Verify Shoplive page        ${title_shoplive}       ${to_login_button}
-    Input Username and Password    ${input_user}     ${input_pass}       ${username_success}      ${password_success}
-    Click Button Login          ${btn_login}
-    Verify Login Success           ${txt_message}

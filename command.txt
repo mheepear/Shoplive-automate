@@ -1,0 +1,2 @@
+robot -d login-test/output login-test
+robot -d register-test/output register-test

@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation    Tests to verify that account registering succeed
 Library    SeleniumLibrary      implicit_wait=3
 Library     FakerLibrary
 Library    BuiltIn
@@ -52,14 +53,24 @@ Verify Login Fail
 #    Element Text Should Be       ${xpath}        ${}
 
 *** Test Cases ***
-# Login shoplive - Fail
-#     [tags]    fail
-#     Open Browser    about:blank    chrome
-#     Go To           ${url_shoplive}
-#     Verify Shoplive page        ${title_shoplive}       ${to_login_button}
-#     Input Username and Password    ${input_user}     ${input_pass}       ${username_fail}      ${password_fail}
-#     Click Button Login          ${btn_login}
-#     Verify Login Fail           ${txt_not_me}
+Register shoplive - fail
+    [tags]    fail
+
+    ${email_success}     FakerLibrary.email
+    ${name_success}     FakerLibrary.Name
+    ${tel_success}      FakerLibrary.Numerify  +%%-%%%%-%%%%
+    ${password_success}     FakerLibrary.password
+
+    Open Browser    about:blank    chrome
+    Go To       ${url_shoplive}
+    Verify Register page        ${txt_verify}       
+    Input Email     ${input_user}      ${email_success}     ${btn_register}
+
+    Input Name      ${input_fname}      ${name_success}
+    Input Telephone     ${input_tel}        ${tel_success}
+    Input Password      ${input_pass}       ${password_success}
+    Click Button Login      ${btn_register2}
+    Wait Until Element Contains      ${register_verify}      ${name_success}   
 Register shoplive - success
     [tags]    success
 

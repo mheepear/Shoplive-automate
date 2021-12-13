@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211213 23:49:32.458" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211214 00:03:19.859" rpa="false" schemaversion="2">
 <suite id="s1" name="Login-Test" source="/Users/nadthapon/Documents/GitHub/Shoplive-automate/creator-automate/login-test">
 <suite id="s1-s1" name="Invalid-Login" source="/Users/nadthapon/Documents/GitHub/Shoplive-automate/creator-automate/login-test/invalid-login.robot">
 <test id="s1-s1-t1" name="Login shoplive - Fail">
@@ -7,14 +7,14 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211213 23:49:32.584" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20211213 23:49:32.584" endtime="20211213 23:49:34.799"/>
+<msg timestamp="20211214 00:03:19.983" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211214 00:03:19.982" endtime="20211214 00:03:22.058"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url_shoplive}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211213 23:49:34.800" level="INFO">Opening url 'https://creator-rc.shoplive.dev/'</msg>
-<status status="PASS" starttime="20211213 23:49:34.799" endtime="20211213 23:49:35.601"/>
+<msg timestamp="20211214 00:03:22.059" level="INFO">Opening url 'https://creator-rc.shoplive.dev/'</msg>
+<status status="PASS" starttime="20211214 00:03:22.058" endtime="20211214 00:03:23.151"/>
 </kw>
 <kw name="Verify Shoplive page" library="resource">
 <arg>${title_shoplive}</arg>
@@ -22,16 +22,16 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211213 23:49:35.638" level="INFO">Page title is 'ShopLIVE Creator'.</msg>
-<status status="PASS" starttime="20211213 23:49:35.602" endtime="20211213 23:49:35.638"/>
+<msg timestamp="20211214 00:03:23.192" level="INFO">Page title is 'ShopLIVE Creator'.</msg>
+<status status="PASS" starttime="20211214 00:03:23.151" endtime="20211214 00:03:23.192"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:35.639" level="INFO">Clicking element 'xpath=//*[@id="app"]/span/div/div/nav/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20211213 23:49:35.638" endtime="20211213 23:49:39.373"/>
+<msg timestamp="20211214 00:03:23.192" level="INFO">Clicking element 'xpath=//*[@id="app"]/span/div/div/nav/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20211214 00:03:23.192" endtime="20211214 00:03:26.930"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:35.601" endtime="20211213 23:49:39.373"/>
+<status status="PASS" starttime="20211214 00:03:23.151" endtime="20211214 00:03:26.930"/>
 </kw>
 <kw name="Input Username and Password" library="resource">
 <arg>${input_user}</arg>
@@ -41,69 +41,69 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_user}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:39.653" level="INFO">Element 'name=email' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:39.374" endtime="20211213 23:49:39.653"/>
+<msg timestamp="20211214 00:03:27.296" level="INFO">Element 'name=email' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:26.931" endtime="20211214 00:03:27.296"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_pass}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:39.702" level="INFO">Element 'name=password' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:39.653" endtime="20211213 23:49:39.702"/>
+<msg timestamp="20211214 00:03:27.313" level="INFO">Element 'name=password' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:27.296" endtime="20211214 00:03:27.314"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_user}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:39.702" level="INFO">Typing text 'xxxxx@xxxxx.com' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20211213 23:49:39.702" endtime="20211213 23:49:41.401"/>
+<msg timestamp="20211214 00:03:27.314" level="INFO">Typing text 'xxxxx@xxxxx.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20211214 00:03:27.314" endtime="20211214 00:03:28.886"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_pass}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:41.401" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20211213 23:49:41.401" endtime="20211213 23:49:41.856"/>
+<msg timestamp="20211214 00:03:28.887" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20211214 00:03:28.887" endtime="20211214 00:03:29.076"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:39.373" endtime="20211213 23:49:41.856"/>
+<status status="PASS" starttime="20211214 00:03:26.930" endtime="20211214 00:03:29.076"/>
 </kw>
 <kw name="Click Button Login" library="resource">
 <arg>${btn_login}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:41.874" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:41.857" endtime="20211213 23:49:41.874"/>
+<msg timestamp="20211214 00:03:29.268" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:29.076" endtime="20211214 00:03:29.268"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:41.875" level="INFO">Clicking element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button'.</msg>
-<status status="PASS" starttime="20211213 23:49:41.874" endtime="20211213 23:49:42.017"/>
+<msg timestamp="20211214 00:03:29.269" level="INFO">Clicking element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button'.</msg>
+<status status="PASS" starttime="20211214 00:03:29.268" endtime="20211214 00:03:29.485"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:41.857" endtime="20211213 23:49:42.017"/>
+<status status="PASS" starttime="20211214 00:03:29.076" endtime="20211214 00:03:29.485"/>
 </kw>
 <kw name="Verify Login Fail" library="resource">
 <arg>${txt_not_me}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:42.593" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/p' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:42.017" endtime="20211213 23:49:42.593"/>
+<msg timestamp="20211214 00:03:30.057" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/p' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:29.486" endtime="20211214 00:03:30.057"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:42.017" endtime="20211213 23:49:42.593"/>
+<status status="PASS" starttime="20211214 00:03:29.485" endtime="20211214 00:03:30.058"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20211213 23:49:42.593" endtime="20211213 23:49:42.682"/>
+<status status="PASS" starttime="20211214 00:03:30.058" endtime="20211214 00:03:30.144"/>
 </kw>
 <tag>fail</tag>
-<status status="PASS" starttime="20211213 23:49:32.583" endtime="20211213 23:49:42.682"/>
+<status status="PASS" starttime="20211214 00:03:19.982" endtime="20211214 00:03:30.144"/>
 </test>
 <doc>A test suite with a single test for valid login.
 
 This test has a workflow that is created using keywords in
 the imported resource file.</doc>
-<status status="PASS" starttime="20211213 23:49:32.472" endtime="20211213 23:49:42.683"/>
+<status status="PASS" starttime="20211214 00:03:19.873" endtime="20211214 00:03:30.144"/>
 </suite>
 <suite id="s1-s2" name="Valid-Login" source="/Users/nadthapon/Documents/GitHub/Shoplive-automate/creator-automate/login-test/valid-login.robot">
 <test id="s1-s2-t1" name="Login shoplive - success">
@@ -111,14 +111,14 @@ the imported resource file.</doc>
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211213 23:49:42.688" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20211213 23:49:42.688" endtime="20211213 23:49:44.532"/>
+<msg timestamp="20211214 00:03:30.149" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211214 00:03:30.149" endtime="20211214 00:03:31.988"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url_shoplive}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211213 23:49:44.533" level="INFO">Opening url 'https://creator-rc.shoplive.dev/'</msg>
-<status status="PASS" starttime="20211213 23:49:44.533" endtime="20211213 23:49:45.289"/>
+<msg timestamp="20211214 00:03:31.989" level="INFO">Opening url 'https://creator-rc.shoplive.dev/'</msg>
+<status status="PASS" starttime="20211214 00:03:31.989" endtime="20211214 00:03:32.734"/>
 </kw>
 <kw name="Verify Shoplive page" library="resource">
 <arg>${title_shoplive}</arg>
@@ -126,16 +126,16 @@ the imported resource file.</doc>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211213 23:49:45.333" level="INFO">Page title is 'ShopLIVE Creator'.</msg>
-<status status="PASS" starttime="20211213 23:49:45.289" endtime="20211213 23:49:45.333"/>
+<msg timestamp="20211214 00:03:32.770" level="INFO">Page title is 'ShopLIVE Creator'.</msg>
+<status status="PASS" starttime="20211214 00:03:32.735" endtime="20211214 00:03:32.770"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:45.333" level="INFO">Clicking element 'xpath=//*[@id="app"]/span/div/div/nav/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20211213 23:49:45.333" endtime="20211213 23:49:49.347"/>
+<msg timestamp="20211214 00:03:32.770" level="INFO">Clicking element 'xpath=//*[@id="app"]/span/div/div/nav/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20211214 00:03:32.770" endtime="20211214 00:03:36.748"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:45.289" endtime="20211213 23:49:49.347"/>
+<status status="PASS" starttime="20211214 00:03:32.734" endtime="20211214 00:03:36.748"/>
 </kw>
 <kw name="Input Username and Password" library="resource">
 <arg>${input_user}</arg>
@@ -145,71 +145,71 @@ the imported resource file.</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_user}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:49.718" level="INFO">Element 'name=email' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:49.347" endtime="20211213 23:49:49.718"/>
+<msg timestamp="20211214 00:03:37.049" level="INFO">Element 'name=email' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:36.749" endtime="20211214 00:03:37.049"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath_pass}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:49.768" level="INFO">Element 'name=password' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:49.718" endtime="20211213 23:49:49.768"/>
+<msg timestamp="20211214 00:03:37.124" level="INFO">Element 'name=password' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:37.049" endtime="20211214 00:03:37.124"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_user}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:49.768" level="INFO">Typing text 'demo@shoplive.dev' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20211213 23:49:49.768" endtime="20211213 23:49:51.137"/>
+<msg timestamp="20211214 00:03:37.124" level="INFO">Typing text 'demo@shoplive.dev' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20211214 00:03:37.124" endtime="20211214 00:03:38.325"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_pass}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:51.137" level="INFO">Typing text 'Password' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20211213 23:49:51.137" endtime="20211213 23:49:51.354"/>
+<msg timestamp="20211214 00:03:38.326" level="INFO">Typing text 'Password' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20211214 00:03:38.326" endtime="20211214 00:03:38.524"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:49.347" endtime="20211213 23:49:51.355"/>
+<status status="PASS" starttime="20211214 00:03:36.748" endtime="20211214 00:03:38.524"/>
 </kw>
 <kw name="Click Button Login" library="resource">
 <arg>${btn_login}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:51.511" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:51.355" endtime="20211213 23:49:51.511"/>
+<msg timestamp="20211214 00:03:38.700" level="INFO">Element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:38.524" endtime="20211214 00:03:38.700"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211213 23:49:51.511" level="INFO">Clicking element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button'.</msg>
-<status status="PASS" starttime="20211213 23:49:51.511" endtime="20211213 23:49:51.690"/>
+<msg timestamp="20211214 00:03:38.700" level="INFO">Clicking element '//*[@id="app"]/span/div/div/div[1]/div/div/div[4]/button'.</msg>
+<status status="PASS" starttime="20211214 00:03:38.700" endtime="20211214 00:03:38.887"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:51.355" endtime="20211213 23:49:51.690"/>
+<status status="PASS" starttime="20211214 00:03:38.524" endtime="20211214 00:03:38.887"/>
 </kw>
 <kw name="Verify Login Success" library="resource">
 <arg>${txt_message}</arg>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${xpath}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20211213 23:49:51.705" level="INFO">Element '//*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span[1]' is displayed.</msg>
-<status status="PASS" starttime="20211213 23:49:51.691" endtime="20211213 23:49:51.705"/>
+<msg timestamp="20211214 00:03:38.929" level="INFO">Element '//*[@id="app"]/span/div/div/nav/div/div/div[1]/div[1]/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20211214 00:03:38.888" endtime="20211214 00:03:38.929"/>
 </kw>
-<status status="PASS" starttime="20211213 23:49:51.691" endtime="20211213 23:49:51.705"/>
+<status status="PASS" starttime="20211214 00:03:38.887" endtime="20211214 00:03:38.929"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20211213 23:49:51.705" endtime="20211213 23:49:51.781"/>
+<status status="PASS" starttime="20211214 00:03:38.929" endtime="20211214 00:03:39.012"/>
 </kw>
 <tag>success</tag>
-<status status="PASS" starttime="20211213 23:49:42.687" endtime="20211213 23:49:51.781"/>
+<status status="PASS" starttime="20211214 00:03:30.149" endtime="20211214 00:03:39.013"/>
 </test>
 <doc>A test suite with a single test for valid login.
 
 This test has a workflow that is created using keywords in
 the imported resource file.</doc>
-<status status="PASS" starttime="20211213 23:49:42.683" endtime="20211213 23:49:51.782"/>
+<status status="PASS" starttime="20211214 00:03:30.145" endtime="20211214 00:03:39.013"/>
 </suite>
-<status status="PASS" starttime="20211213 23:49:32.459" endtime="20211213 23:49:51.783"/>
+<status status="PASS" starttime="20211214 00:03:19.860" endtime="20211214 00:03:39.014"/>
 </suite>
 <statistics>
 <total>
