@@ -6,6 +6,16 @@ Documentation     A test suite with a single test for valid login.
 Resource          resource.robot
 
 *** Test Cases ***
+Login shoplive - success
+    [tags]    success
+    Open Browser    about:blank    chrome
+    Go To           ${url_shoplive}
+    Verify Shoplive page        ${title_shoplive}       ${to_login_button}
+    Input Username and Password    ${input_user}     ${input_pass}       ${username_success}      ${password_success}
+    Click Button Login          ${btn_login}
+    Verify Login Success           ${txt_message}
+    [Teardown]    Close Browser
+
 Login shoplive - Fail
     [tags]    fail
     Open Browser    about:blank    chrome

@@ -18,6 +18,7 @@
 
 # Run test file
 1. [robot {file name}] to run test
+2. [robot -d {result folder} {file name}] to specify your test result location
 
 # For more information about selenium lib for writing your own test
 https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
